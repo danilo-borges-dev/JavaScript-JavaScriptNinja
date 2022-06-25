@@ -1,8 +1,3 @@
-# Desafio da semana #2
-
-Nesse exercício, você está livre para escolher os nomes para suas variáveis e funções! :smile:
-
-```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
 function sum (x, y)
 {
@@ -10,10 +5,9 @@ function sum (x, y)
 }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-let meyVar = (sum (10, 15)) + 5;
+let mayVar = (sum (10, 15)) + 5;
 
-// Qual o valor atualizado dessa variável?
-30
+console.log(mayVar);
 
 // Declare uma nova variável, sem valor.
 let semValor;
@@ -30,10 +24,10 @@ function returValue ()
 }
 
 // Invoque a função criada acima.
-
+returValue();
 
 // Qual o retorno da função? (Use comentários de bloco).
-
+//117
 
 /*
 Crie uma função com as seguintes características:
@@ -42,10 +36,31 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
+function threeArgs (args1, args2, args3)
+{
+    var meyArray = [];
+    meyArray[0] = args1;
+    meyArray[1] = args2;
+    meyArray[2] = args3;
 
+    for(let i = 0; i <= 2; i++)
+    {
+        if(meyArray[i] == NaN || meyArray[i] == undefined)
+        {
+            mesage ();
+        }
+    }
+
+    function mesage ()
+    {
+        console.log("Preencha todos os valores corretamente!");
+    }
+
+    return args1 * args2 * args3;
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
-
+threeArgs(3,3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 
@@ -65,8 +80,8 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
-```
+
+
