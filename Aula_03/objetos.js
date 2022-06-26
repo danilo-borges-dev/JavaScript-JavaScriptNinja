@@ -12,7 +12,11 @@ let mayObject =
 {
     prop_01: mayFunc(),
     prop_02: "Silva Borges",
-    prop_03: sum(10, 10)
+    prop_03: sum(10, 10),
+    prop_04: function(a, b)
+    {
+        return a * b;
+    }
 }
 
 console.log(mayObject.prop_01 + " " + mayObject.prop_02);
@@ -53,3 +57,8 @@ MayObj.Nome = function ()
 }
 
 console.log(MayObj.Nome());
+
+console.log();
+
+console.log(mayObject.prop_04(10,2));
+
