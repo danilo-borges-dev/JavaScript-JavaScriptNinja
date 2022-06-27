@@ -4,14 +4,37 @@ um único parâmetro como argumento. Essa função deve retornar `true` se o
 equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
-
+let IsTruThy = function (x)
+{
+    return console.log(`Result= ${!!x}`);
+}
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
+IsTruThy(NaN);
+IsTruThy(null);
+IsTruThy(false);
+IsTruThy(0);
+IsTruThy(-0);
+IsTruThy(undefined);
+IsTruThy('');
+IsTruThy("");
+
 
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
+IsTruThy("Danilo Sucesso, Gatidão, Coragem, Fé, Metalizar, Só Alegria");
+IsTruThy(1);
+IsTruThy(true);
+IsTruThy([]);
+IsTruThy({});
+IsTruThy(' ');
+IsTruThy(-1);
+IsTruThy([1,2,3]);
+IsTruThy(12);
+IsTruThy(150);
+
 
 
 /*
@@ -26,35 +49,70 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-
+let Carro = 
+{
+    Marca: "",
+    Modelo: "",
+    Placa: "",
+    Ano: 0,
+    Cor: "",
+    QuantasPortas: 0,
+    Assentos: 0,
+    QuantidadeDePessoas: 0
+};
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
+let mudarCor = function(cor)
+{
+    Carro.Cor = cor;
+}
 
+mudarCor("Branco");
+console.log(Carro.Cor);
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-
+let obterCor = function ()
+{
+    return Carro.Cor;
+}
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */ 
+Carro.Modelo = "LTZ SPORT 6";
+let obterModelo = function ()
+{
+    return Carro.Modelo;
+}
+
+console.log(obterModelo());
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
+Carro.Marca = "Cruze 2012 Lindo, Perfeito, Com Teto Solar, Incrível :D Eu tenho";
+let obterMarca = function ()
+{
+    return Carro.Marca;
+}
 
-
+console.log(obterMarca());
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
+let obterMarcaModelo = function ()
+{
+    return console.log(`Esse carro é um ${Carro.Marca} ${Carro.Modelo}`);
+}
 
-
+obterMarcaModelo();
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
 seguintes características:
