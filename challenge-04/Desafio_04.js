@@ -129,7 +129,47 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
+Carro.QuantidadeDePessoas = 0;
+Carro.Assentos = 5;
 
+let assentosDisponiveis = 0;
+let perWord = "pessoas";
+
+let entraPessoasNoCarro = function (numPerson)
+{
+    if(Carro.QuantidadeDePessoas < 0)
+    {
+        Carro.QuantidadeDePessoas = 0;
+    }
+
+    assentosDisponiveis = Carro.Assentos - Carro.QuantidadeDePessoas;
+
+    if (Carro.QuantidadeDePessoas <= Carro.Assentos && numPerson < assentosDisponiveis)
+    {
+        Carro.QuantidadeDePessoas += numPerson;
+        console.log(`Já temos ${Carro.QuantidadeDePessoas} pessoas no carro!`);
+        return;
+    }
+
+    if (assentosDisponiveis === 1)
+    {
+        perWord = "pessoa";
+    }
+
+    if (assentosDisponiveis < numPerson && Carro.QuantidadeDePessoas > 0) 
+    {
+        console.log(`Só cabem mais ${Carro.Assentos - Carro.QuantidadeDePessoas} ${perWord}!`);
+        return;
+    }
+
+    if(Carro.QuantidadeDePessoas === 0)
+    {
+        console.log(`O carro cabe apenas ${Carro.Assentos}.`);
+        return;
+    }
+    console.log("O carro já está lotado!");
+    return;
+}
 
         
 
@@ -142,30 +182,38 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
+// Branco
 
 // Mude a cor do carro para vermelho.
+Carro.Cor = "Vermelho";
 
 // E agora, qual a cor do carro?
+// Vermelho
 
 // Mude a cor do carro para verde musgo.
+mudarCor("musgo");
+console.log(Carro.Cor);
 
 // E agora, qual a cor do carro?
+// musgo
 
 // Qual a marca e modelo do carro?
+console.log(obterMarca());
 
 // Adicione 2 pessoas no carro.
-
+//entraPessoasNoCarro(2);
 
 // Adicione mais 4 pessoas no carro.
-
+//entraPessoasNoCarro(1);
 
 // Faça o carro encher.
-
+//entraPessoasNoCarro(2);
 
 // Tire 4 pessoas do carro.
-
+Carro.QuantidadeDePessoas = -4;
 
 // Adicione 10 pessoas no carro.
-
+entraPessoasNoCarro(10);
 
 // Quantas pessoas temos no carro?
+console.log(`Temos ${Carro.QuantidadeDePessoas} no carro.`);
