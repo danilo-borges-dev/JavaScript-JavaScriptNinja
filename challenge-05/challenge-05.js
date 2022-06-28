@@ -47,7 +47,10 @@ let arr_02 = [
     {
         let nomeCompleto = arr_02[0] + arr_02[3].sobrenome;
         return nomeCompleto;
-    }
+    },
+    [
+        ["Está dentro de um arry de terceira dimenção"]
+    ]
 ]
 
 console.log(arr_02[4]());
@@ -56,7 +59,7 @@ console.log(arr_02[4]());
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-// ?
+console.log(arr_02[5][0][0]);
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -72,30 +75,58 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-// ?
+function book (bookName)
+{
+    let obj = 
+    {
+        "Senhor dos Aneis": 
+        {
+            quantidadePaginas: 753,
+            autor: "Tolkien",
+            editora: "Genesis"
+        },
+        "Animais Fantásticos e o Segredo de Dumbledore": 
+        {
+            quantidadePaginas: 375,
+            autor: "Nome do Autor",
+            editora: "Alta books"
+        },
+        "Percy Jackson o Caçador de Raios": 
+        {   
+            quantidadePaginas: 124,
+            autor: "Maycon P. Daris",
+            editora: "Nome da Editora"
+        },  
+    }
+    if (bookName === undefined)
+    {        
+        return obj;
+    }
+    return obj[bookName];
+}
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+console.log(book());
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
+console.log("O livro Animais Fantásticos e o Segredo de Dumbledore tem "  + book("Animais Fantásticos e o Segredo de Dumbledore").quantidadePaginas + " páginas!");
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
+console.log(`O autor do livro Senhor dos Aneis é ${book("Senhor dos Aneis").autor}.`);
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+console.log(`O livro Percy Jackson o Caçador de Raios foi publicado pela editora ${book("Percy Jackson o Caçador de Raios").editora}`);
