@@ -1,32 +1,61 @@
 /*
 Crie um array com 5 items (tipos variados).
 */
-// ?
+let myArray = 
+[
+    "Coragem",
+    123456,
+    [ "C#", "Js", "Java", "HTML", "CSS" ],
+    function ()
+    {
+        return `Uma função anônima dentro de um arry de 01 dimensão`;
+    },
+    {
+        nome: "Maria",
+        sobrenome: "Luiza",
+        idade: 26,
+        escolaridade: () =>  `Uma função anônima dentro de um Objeto. Este objeto está dentro de um arry de 01 dimensão.`
+    }
+]
 
 /*
 Crie uma função chamada `addItem`, que irá adicionar itens no array criado.
 A função deverá retornar o array atualizado.
 */
-// ?
+function addItem ( newItem )
+{
+    myArray.push(newItem);
+    return myArray;
+}
+
+addItem("Danilo Boladão");
+console.log(myArray);
 
 /*
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
-// ?
+let newArray =
+[
+    "String",
+    123,
+    [ "Novo Array" ]
+]
+myArray.push(newArray);
+console.log(myArray);
 
 /*
 Mostre no console o segundo elemento desse último array, criado acima, com a
 frase:
 "O segundo elemento do segundo array é [ELEMENTO]."
 */
-// ?
+console.log(`O segundo elemento do segundo array é ${myArray[6][1]}.`);
 
 /*
 Mostre no console quantos itens tem o primeiro array criado, com a frase:
 "O primeiro array tem [QUANTIDADE DE ITENS] itens."
 */
-// ?
+console.log(`O primeiro array tem [QUANTIDADE DE ITENS] itens.`);
 
 /*
 Agora mostre no console quantos itens tem o segundo array criado, com a frase:
