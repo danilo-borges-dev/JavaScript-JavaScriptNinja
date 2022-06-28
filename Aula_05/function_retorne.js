@@ -32,3 +32,14 @@ function mayFuncObj ()
 }
 
 console.log(mayFuncObj().p1);
+
+let arr = [1 , 0, 3, 5];
+
+function func ( args )
+{
+    return arr[args]
+}
+
+console.log(func(2));
+
+console.log(mayFuncObj()["1"]);
