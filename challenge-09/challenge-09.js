@@ -67,7 +67,8 @@ por parâmetro, INVOCADA, e passando a ela por parâmetro os dois valores
 que foram passadas para a primeira função `calculator`.
 */
 function calculator ( fator01, fator02 ) {
-    return function ( callback ) {
+    return function ( callback ) 
+    {
         return callback( fator01, fator02 );
     };
 }
