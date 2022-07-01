@@ -1,4 +1,5 @@
-(function (){/*
+(function ()
+{/*
     Crie uma IIFE que envolva todo esse arquivo (inclusive esse comentário),
     e faça a indentação correta.
     */
@@ -10,10 +11,10 @@
     resolver o problema corretamente.
     */
     var five = parseInt('5');
-    console.log( five + ' é número?', typeof five === 'number' );
+    console.log(five + ' é número?', typeof five === 'number');
 
     var concat = String(10 + 10);
-    console.log( '"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string' );
+    console.log('"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string');
 
     /*
     Voltando ao exemplo da calculadora, vamos utilizar mais uma abordagem
@@ -24,13 +25,13 @@
     função receberá dois parâmetros e retornará a operação referente à sua
     propriedade, usando os valores passados por parâmetro.
     */
-    let operation = 
+    let operation =
     {
-        "+": function (x, y) {return x + y},
-        "-": function (x, y) {return x - y},
-        "*": function (x, y) {return x * y},
-        "/": function (x, y) {return x / y},
-        "%": function (x, y) {return x % y}
+        "+": function (x, y) { return x + y },
+        "-": function (x, y) { return (x - y) },
+        "*": function (x, y) { return x * y },
+        "/": function (x, y) { return x / y },
+        "%": function (x, y) { return x % y }
     }
 
     /*
@@ -43,18 +44,15 @@
     Caso contrário, "false".
     - O desafio é fazer o retorno sem usar "if" ou "switch".
     */
-    function isOperatorValid (op)
+    function isOperatorValid(op)
     {
         let result;
-        (op === "+") ? function  () { result = true; return true }() : result = false;
-        (op === "-") ? function  () { result = true; return true }() : result = false;
-        (op === "*") ? function  () { result = true; return true }() : result = false;
-        (op === "/") ? function  () { result = true; return true }() : result = false;
-        (op === "%") ? function  () { result = true; return true }() : result = false;
+        ((op !== "+") && (op !== "-") && (op !== "*") && (op !== "/") && (op !== "%")) ? result = false : result = true;
+
         return result;
     }
 
-    console.log(isOperatorValid("+"));
+    console.log(isOperatorValid("/"));
 
     /*
     Agora vamos criar a calculadora.
@@ -68,7 +66,30 @@
     operador passado para a função "calculator", e passando para esse método
     os dois parâmetros da função de retorno de "calculator".
     */
-    // ?
+    function calculator(op)
+    {
+        if (isOperatorValid(op))
+        {
+            return function (x, y)
+            {
+                if ((typeof(x) !== "number") || (typeof(y) !== "number"))
+                {
+                    return false;
+                }
+                else 
+                {
+                    let result = operation[op](x, y);
+                    return result;
+                }
+            }
+        }
+        return false;
+    }
+
+    let fucTeste = calculator("-");
+    let resultadofinal = fucTeste(2,3);
+
+    console.log("Teste" + resultadofinal);
 
     /*
     Crie uma função chamada "showOperationMessage" que recebe três parâmetros:
@@ -77,7 +98,7 @@
     'A operação [NUMBER1] [OPERATOR] [NUMBER2] =';
     Essa função mostrará a mensagem da operação que criaremos mais abaixo.
     */
-    // ?
+   Testar o exercício anterior
 
     /*
     Crie uma função chamada "showErrorMessage" que recebe um parâmetro: o
