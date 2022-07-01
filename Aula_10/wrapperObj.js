@@ -18,3 +18,14 @@ console.log(`O valor convertido de duas string e somado ${resultado}`);
 console.log(typeof(null)); // Erro de implementação de JavaScript
 
 // Utilizar e confiar no typeof apenas com valores primitivos, como number, boolean, undefnid, string (cuidado com strings porque elas são objetos), null, symbol
+
+console.log();
+
+console.log(typeof(Number));
+console.log(typeof(String));
+console.log(typeof(undefined));
+console.log(typeof(null));
+console.log(typeof(Symbol));
+console.log(typeof(Boolean));
+
+
