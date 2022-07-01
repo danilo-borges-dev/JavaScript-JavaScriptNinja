@@ -89,7 +89,7 @@
     let fucTeste = calculator("-");
     let resultadofinal = fucTeste(2,3);
 
-    console.log("Teste" + resultadofinal);
+    console.log("Resultado" + resultadofinal);
 
     /*
     Crie uma função chamada "showOperationMessage" que recebe três parâmetros:
@@ -98,7 +98,14 @@
     'A operação [NUMBER1] [OPERATOR] [NUMBER2] =';
     Essa função mostrará a mensagem da operação que criaremos mais abaixo.
     */
-   Testar o exercício anterior
+   function showOperationMessage (paran_01, paran_02, paran_03)
+   {
+        let fucTeste = calculator(paran_01);
+        let resultadofinal = fucTeste(paran_02,paran_03);
+        return `A operação ${paran_02} ${paran_01} ${paran_03} = ${resultadofinal}`;
+   }
+
+   console.log(showOperationMessage("*", 2, 5));
 
     /*
     Crie uma função chamada "showErrorMessage" que recebe um parâmetro: o
@@ -106,15 +113,26 @@
     Essa função deverá retornar a frase:
     'Operação "[OPERATOR]" não permitida!'
     */
-    // ?
+   function showErrorMessage (paran_01)
+   {
+        let r = calculator(paran_01);
+        if (r === false)
+        {
+            return `Operação ${paran_01} não permitida!`;
+        }
+        return `Operação realizada com sucesso, pode prosseguir!`;
+   }
 
+   console.log(showErrorMessage("+"));
     /*
     Nossa calculadora está pronta! Agora vamos testá-la:
     PASSO 1:
     - Declare 3 variáveis: "number1" e "number2", iniciando com valor zero, e
     "operationSignal", sem valor por enquanto.
     */
-    // ?
+    let number_01 = 0;
+    let number_02 = 0;
+    let operationSignal;
 
     /*
     PASSO 2:
@@ -122,7 +140,8 @@
     variável chamada "sum", que receba a função "calculator", passando por
     parâmetro a variável que recebeu o sinal da operação.
     */
-    // ?
+    operationSignal = "+";
+    let sum = calculator(operationSignal);
 
     /*
     PASSO 3:
@@ -136,7 +155,8 @@
     - O segundo, a função de soma, passando os dois operandos.
     - Se "sum" for "false", mostrar no console a mensagem de erro.
     */
-    // ?
+    number_01 = 10;
+    number_02 = 3;
 
     /*
     Repita desde o "PASSO 2" com as operações de subtração, multiplicação,
