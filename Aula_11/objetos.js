@@ -1,28 +1,32 @@
 let obj1 = 
 {
-    prop: "Nome",
+    prop1: "Nome",
     prop2: "Idade"
 }
 
-let obj2 = obj1;
+let obj2 = Object.create(obj1);
 
-obj2.prop = "100";
+obj2.prop3 = "Propriedade";
 
-console.log(obj1);
+ for (var item in obj2) {
+    console.log(item);
+ }
 
- let obj3 = { x1: 1, x2: 2};
+ console.log();
 
- let obj4 = Object.create(obj3);
+ for (let item in obj2)
+ {
+     console.log(obj2.hasOwnProperty(item));
+ }
 
- console.log(obj4.x1);
- 
- obj4.x1 = "Danilo";
- 
- console.log(obj4.x1);
- console.log(obj3.x1);
+console.log();
 
- obj4.x3 = "X3";
+ let objToArray = 
+ {
+    name: "Danilo",
+    age: 29,
+    sex: 'M'
+ }
 
- console.log(obj4.x3);
-
-
+ let newArry = Object.keys(objToArray);
+ console.log(newArry);
