@@ -157,7 +157,7 @@
     */
     number_01 = 10;
     number_02 = 3;
-
+    
     /*
     Repita desde o "PASSO 2" com as operações de subtração, multiplicação,
     divisão e resto. Crie variáveis com os nomes "subtraction",
