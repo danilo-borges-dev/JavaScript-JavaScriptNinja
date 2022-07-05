@@ -1,11 +1,12 @@
-let myArray = ["Danilo", 1, 2]
-console.log(myArray);
+let myArray = ["Danilo", "1", "2"]
+let newArray = ["Silva", "Borges", "1"]
 
-myArray.push("Silva");
+let joinArray = newArray.join(" ");
 
-console.log(myArray);
+console.log(joinArray);
 
-myArray.pop();
+let newArray2 = ["Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto"]
+console.log(newArray2.reverse());
+console.log();
 
-console.log(myArray);
-
+console.log(newArray2.sort());
