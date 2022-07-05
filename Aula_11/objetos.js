@@ -30,3 +30,20 @@ console.log();
 
  let newArry = Object.keys(objToArray);
  console.log(newArry);
+ console.log(newArry.length);
+
+ console.log();
+
+ let objToString = 
+ {
+    a: "A",
+    b: "B",
+    c: "C"
+ }
+
+ console.log(JSON.stringify(objToString));
+
+ console.log();
+
+ let stringToObject = '{"prop1": 1, "prop2": 2, "prop3": 4}';
+ console.log(JSON.parse(stringToObject));
