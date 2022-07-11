@@ -13,3 +13,15 @@ let reduceLet = arr.reduce(function(acumulado, atual, index, array) {
     4ª - 7 + 4 = 10
     5ª - 12 + 5 = 15
 */
+
+
+let newArr = ["D", "a", "n", "i", "l", "o"];
+reduceLet = newArr.reduce(function (acumulado, atual, index, arry){
+    return acumulado + atual;
+});
+
+console.log(reduceLet);
+
+let newArray2 = ["Danilo", 3, {}, [], 'T'];
+
+console.log(newArray2.indexOf('T'));
