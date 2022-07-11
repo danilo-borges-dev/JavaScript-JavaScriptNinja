@@ -25,3 +25,8 @@ console.log(reduceLet);
 let newArray2 = ["Danilo", 3, {}, [], 'T'];
 
 console.log(newArray2.indexOf('T'));
+
+console.log(Array.isArray(newArr));
+
+console.log(Array.isArray([]));
+console.log(Array.isArray({}));
