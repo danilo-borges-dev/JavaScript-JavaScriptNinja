@@ -1,1 +1,5 @@
-console.log("JS no browser!");
+(function () {
+    console.log("JS no browser!");
+
+    let name = "Danilo";
+})();
