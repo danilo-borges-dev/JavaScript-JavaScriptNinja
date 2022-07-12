@@ -1,5 +1,16 @@
-(function () {
-    console.log("JS no browser!");
+(function(){
+    let myObject = {
+        myProp: 1,
+        init: function(){
+            return this;
+        }
+    };
+    console.log(myObject.init());
 
-    let name = "Danilo";
+    function MyConstructor(){
+        this.prop1 = "Propriedade 1",
+        this.prop2 = "Propriedade 2"
+    }
+
+    console.log(`MeyConstructor = ${MyConstructor()}`);  // String interpolada
 })();
