@@ -37,6 +37,7 @@
 
     this.addAge = function (){
       this.age += arguments[0];
+      return this;
     }
   }
 
@@ -75,4 +76,6 @@
   */
   console.log('\nNova idade das pessoas:');
   console.log(`${person_Danilo.getFullName()} agora tem ${person_Danilo.addAge(10).getAge()}`);
+  console.log(`${person_Joao.getFullName()} agora tem ${person_Danilo.addAge(5).getAge()}`);
+  console.log(`${person_Marcos.getFullName()} agora tem ${person_Danilo.addAge(10).getAge()}`);
 })();
