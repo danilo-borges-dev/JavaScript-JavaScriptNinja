@@ -1,5 +1,5 @@
 (function(){
     'use strict';
-    name = "Danilo Borges";
+    let name = "Danilo Silva";
+    console.log("Name", name);
 })();
-console.log("Name", name);
