@@ -31,4 +31,15 @@
     for (let item in obj_02) {
         console.log(obj_02.hasOwnProperty(item), item);
     }
+
+    let objToArray =
+    {
+        name: "Danilo",
+        age: 29,
+        sex: 'M'
+    }
+
+    let newArry = Object.keys(objToArray);
+
+    console.log(newArry);
 })();
