@@ -1,4 +1,4 @@
-(function(){
+(function () {
     "use strict";
     let name = "Danilo ";
 
@@ -17,4 +17,18 @@
 
     let sliceTest = "Danilo";
     console.log(sliceTest.slice(1, 4));
+
+    let obj_01 =
+    {
+        prop_01: 1,
+        prop_02: "Danilo"
+    }
+
+    let obj_02 = Object.create(obj_01);
+
+    obj_02.prop_03 = "Nova Propriedade";
+
+    for (let item in obj_02) {
+        console.log(obj_02.hasOwnProperty(item), item);
+    }
 })();
