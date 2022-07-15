@@ -42,4 +42,19 @@
     let newArry = Object.keys(objToArray);
 
     console.log(newArry);
+
+    let n = "Danilo da Sivla Borges";
+    console.log(n.split());
+    console.log(n.split('n'));
+
+    let s = "Sucess";
+    console.log(s.split('s').join('d'));
+
+
+    let stringTest = "Mensagem de bom dia para você";
+    console.log(stringTest.substring(5));
+
+    console.log(stringTest.substring(5, 7));
+
+    console.log(stringTest.substring(10, 2));
 })();
