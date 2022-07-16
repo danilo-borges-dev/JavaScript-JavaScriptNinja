@@ -57,4 +57,10 @@
     console.log(stringTest.substring(5, 7));
 
     console.log(stringTest.substring(10, 2));
+
+    let stringTest2 = "Esta mensagem ficará toda em caixa baixa";
+
+    console.log(stringTest2.toLowerCase());
+
+    console.log(stringTest2.toUpperCase());
 })();
