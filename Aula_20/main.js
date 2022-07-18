@@ -51,16 +51,21 @@
     console.log(s.split('s').join('d'));
 
 
-    let stringTest = "Mensagem de bom dia para você";
-    console.log(stringTest.substring(5));
+    let frase_02 = "Mensagem do dia. Seja corajoso e tenha zelo por aquilo que já possui";
 
-    console.log(stringTest.substring(5, 7));
+    let testUpper = frase_02.toUpperCase();
+    console.log(testUpper);
 
-    console.log(stringTest.substring(10, 2));
+    let testLower = testUpper.toLowerCase();
+    console.log(testLower);
 
-    let stringTest2 = "Esta mensagem ficará toda em caixa baixa";
+    let meuNome = "danilo";
+    console.log(meuNome);
+    let meuNovoNome = meuNome.charAt(0).toLocaleUpperCase() + meuNome.slice(1);
+    console.log(meuNovoNome);
 
-    console.log(stringTest2.toLowerCase());
+    console.log();
 
-    console.log(stringTest2.toUpperCase());
+    console.log("meu Nome".toLocaleUpperCase());
+
 })();
