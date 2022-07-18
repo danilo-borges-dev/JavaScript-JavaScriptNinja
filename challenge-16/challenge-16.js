@@ -1,8 +1,10 @@
+(function (){
+    "use strict";
 /*
 1. Envolva todo o conteúdo desse desafio em uma IIFE.
 2. Adicione a diretiva 'use strict';
 3. Crie um arquivo index.html e adicione esse script à ele.
-*/
+*/ 
 
 /*
 Declare uma variável chamada `name` que receba seu primeiro nome.
@@ -14,7 +16,11 @@ Ex: no caso do nome ser "Fernando", deve mostrar as frases:
 E assim por diante, até a última.
 */
 console.log( 'As letras do seu nome:' );
-// ?
+let name = "Danilo";
+let n = name.length;
+for(let i = 0; i < n; i++){
+    console.log(`${name[i]} é a ${i + 1}ª letra do meu nome.`);
+}
 
 /*
 - Declare uma variável chamada `fullName`, que receba seu nome completo,
@@ -68,3 +74,4 @@ Ex.: Nomes que deveriam funcionar: "Fernando", "RoBertO", "gabriEla", etc.
 */
 console.log( '\nNome com letras intercaladas entre caixa alta e baixa:' );
 // ?
+})();
