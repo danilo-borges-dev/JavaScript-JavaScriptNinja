@@ -69,9 +69,9 @@
     // console.log("meu Nome".toLocaleUpperCase());
 
 
-    let num = "10";
-    let num2 = parseInt(num);
-    console.log(num2);
-    console.log(typeof(num));
-    console.log(typeof(num2));
+    let myArray_01 = ["Danilo", 1, "Borges"];
+    let myArray_02 = ["Brasil", 1, 3];
+
+    let n = myArray_02.toString();
+    console.log(n);
 })();

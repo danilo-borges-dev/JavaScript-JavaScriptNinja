@@ -17,8 +17,7 @@
     */
     console.log('As letras do seu nome:');
     let name = "Danilo";
-    let n = name.length;
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < name.length; i++) {
         console.log(`${name[i]} é a ${i + 1}ª letra do meu nome.`);
     }
 
@@ -36,20 +35,16 @@
     */
     console.log('\nNome convertido à partir de um slug:');
     let fullName = "danilo-da-dilva-borges";
-    fullName = fullName.replace("-", " ").replace("-", " ").replace("-", " "); 
-    console.log(fullName);
+    fullName = fullName.replace("-", " ").replace("-", " ").replace("-", " ");
+    //console.log(fullName);
 
-    for(let i = 0; i < fullName.length; i++){
-        if(fullName[i] === ' ' || 0 === fullName.indexOf(fullName[i])){
-            if(0 === fullName.indexOf(fullName[i])){
-                let c = fullName[i];
-                c = c.toUpperCase();
-                // Agora eu preciso trocar o primeiro caractere pelo valor em c
-                fullName.replace(fullName[i], c);
-            }
-            let cName = fullName[i];
-            fullName[i] = cName.toUpperCase();
-        }
+    for (let i = 0; i < fullName.length; i++) {
+        if (i === 0) {
+            let c = fullName[i];
+            c = c.toUpperCase();
+            // Agora eu preciso trocar o primeiro caractere pelo valor em c
+            fullName.replace(fullName[i], c);
+        }        
     }
     console.log(fullName);
     /*
