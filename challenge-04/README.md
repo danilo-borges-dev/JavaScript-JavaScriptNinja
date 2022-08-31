@@ -7,37 +7,15 @@ um único parâmetro como argumento. Essa função deve retornar `true` se o
 equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
-var isTruthy = function (a) {
-    return a ? true : false;
-};
+?
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-isTruthy(undefined);
-isTruthy(-0);
-isTruthy(0);
-isTruthy(NaN);
-isTruthy(false);
-isTruthy(null);
-isTruthy('');
-isTruthy("");
+?
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
-isTruthy(true);
-isTruthy(100);
-isTruthy("Nome");
-isTruthy(function () {});
-isTruthy(!false);
-isTruthy(!0);
-isTruthy(!NaN);
-isTruthy(!false);
-isTruthy(!null);
-isTruthy(!'');
-isTruthy(!"");
-isTruthy(!!100);
-isTruthy({});
-isTruthy([]);
+?
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as
@@ -51,55 +29,35 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-var carro = { 
-              marca: "JavaScript", 
-              modelo: "HTML", 
-              placa: "HTTP:192", 
-              ano: 1998, 
-              cor: "Black-Yellow", 
-              quantasPortas: 4, 
-              assentos: 5, 
-              quantidadePessoas: 0
-            };
+?
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-function mudarCor (novaCor) {
-	carro.cor = novaCor;
-	return console.log("A nova cor do carro é: " + carro.cor);
-}
+?
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-carro.obterCor = function () {
-	return carro.cor;
-};
+?
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
-*/ 
-carro.obterModelo = function () { 
-    return carro.modelo;  
-};
+*/
+?
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-carro.obterMarca = function () {
-    return carro.marca;
-};
+?
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-carro.obterMarcaModelo = function () {
-    return "Este carro é um " + carro.obterMarca() + ", " + carro.obterModelo;
-};
+?
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -117,10 +75,7 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-﻿
-﻿
-        
-
+?
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -130,22 +85,22 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-carro.obterCor(); //"Black-Yellow"
+?
 
 // Mude a cor do carro para vermelho.
-carro.mudarCor("vermelho");
+?
 
 // E agora, qual a cor do carro?
-carro.obterCor(); //"vermelho"
+?
 
 // Mude a cor do carro para verde musgo.
-carro.mudarCor("verde-musgo");
+?
 
 // E agora, qual a cor do carro?
-carro.obterCor(); //"verde-musgo"
+?
 
 // Qual a marca e modelo do carro?
-carro.obterMarcaModelo(); //"Este carro é um HTML, JavaScript."
+?
 
 // Adicione 2 pessoas no carro.
 ?
