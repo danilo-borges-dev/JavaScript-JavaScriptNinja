@@ -41,13 +41,11 @@ Crie uma função com as seguintes características:
 */
 function myFunc(x1, x2, x3) {
     let result = 0;
-    if (x1 == undefined || x2 == undefined || x3 == undefined) {
+    if (x1 === undefined || x2 === undefined || x3 === undefined) {
         return console.log("Preencha todos os valores corretamente!");
     }
-    else {
-        result = (x1 * x2 * x3) + 2;
-        return console.log(result);
-    }
+    result = (x1 * x2 * x3) + 2;
+    return console.log(result);
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
@@ -74,16 +72,16 @@ Crie uma função com as seguintes características:
 console.log();
 
 function myNewFunc(x1, x2, x3) {
-    if (x1 != undefined && (x2 == undefined && x3 == undefined)) {
+    if (x1 !== undefined && (x2 === undefined && x3 === undefined)) {
         return console.log(x1);
     }
-    if (x1 != undefined && x2 != undefined && x3 == undefined) {
+    if (x1 !== undefined && x2 !== undefined && x3 === undefined) {
         return console.log(x1 + x2);
     }
-    if (x1 == undefined) {
+    if (x1 === undefined) {
         return console.log("false");
     }
-    if ((x1 != undefined && +x1) && (x2 != undefined && +x2) && (x3 != undefined && +x3)) {
+    if ((x1 !== undefined && +x1) && (x2 !== undefined && +x2) && (x3 !== undefined && +x3)) {
         return console.log((x1 + x2) / x3);
     }
     else {
