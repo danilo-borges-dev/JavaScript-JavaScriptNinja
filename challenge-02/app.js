@@ -21,15 +21,16 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-function adicionaValor(n1) {
-    return console.log(`O valor da variável agora é ${semValor + n1}`);
+function adicionaValor() {
+    semValor = 10;
+    return console.log(`O valor da variável agora é ${semValor}`);
 }
 
 // Invoque a função criada acima.
 console.log(adicionaValor(10));
 
 // Qual o retorno da função? (Use comentários de bloco).
-// NaN
+// O valor da variável agora é 10
 
 /*
 Crie uma função com as seguintes características:
