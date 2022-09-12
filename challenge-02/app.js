@@ -90,8 +90,8 @@ function myNewFunc(x1, x2, x3) {
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-myNewFunc();
-myNewFunc(10);
-myNewFunc(10, 5);
-myNewFunc(10, 5, 3);
-myNewFunc("Danilo", 5, 3);
+myNewFunc();  // false
+myNewFunc(10); // 10
+myNewFunc(10, 5); // 15
+myNewFunc(10, 5, 3); // 5
+myNewFunc("Danilo", 5, 3); // null
