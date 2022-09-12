@@ -72,7 +72,7 @@ Crie uma função com as seguintes características:
 console.log();
 
 function myNewFunc(x1, x2, x3) {
-    if (x1 !== undefined && (x2 === undefined && x3 === undefined)) {
+    if (x1 !== undefined && x2 === undefined && x3 === undefined) {
         return console.log(x1);
     }
     if (x1 !== undefined && x2 !== undefined && x3 === undefined) {
