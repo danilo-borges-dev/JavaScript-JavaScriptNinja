@@ -8,3 +8,7 @@ let retornoDeUmaFuncao = m01(10)(02);
 
 
 console.log(retornoDeUmaFuncao);
+
+let number = new Number();
+
+console.log(typeof number);
