@@ -5,4 +5,4 @@ let person = {
     peso: 85,
 }
 
-console.log(person);
+console.log(person["nome"]);
