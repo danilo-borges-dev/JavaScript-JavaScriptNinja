@@ -61,3 +61,12 @@ console.log("Está parado? " + novaPessoa.parado);  // Não
 console.log("Idade atual " + novaPessoa.idade); // 29 anos
 novaPessoa.aniversario();  
 console.log("Nova Idade " + novaPessoa.idade);  // 30 anos
+
+novaPessoa.sentado= "Sim";
+console.log(novaPessoa.sentado);  // Sim
+
+novaPessoa.levantar = function () {
+	return this.sentado = "Não. Em pé.";
+}
+novaPessoa.levantar();
+console.log(novaPessoa.sentado);  // Não. Em pé.
