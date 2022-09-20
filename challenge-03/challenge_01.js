@@ -1,4 +1,5 @@
 // Declarar uma variável qualquer, que receba um objeto vazio.
+let objeto = {};
 
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
