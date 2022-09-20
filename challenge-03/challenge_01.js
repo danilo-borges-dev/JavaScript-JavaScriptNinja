@@ -29,7 +29,7 @@ alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
 */
 pessoa.fazerAniversario = function () {
-    
+    this.idade++;
 }
 
 /*
@@ -42,89 +42,125 @@ valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
 */
+pessoa.andar = function ( metrosCaminhados ) {
+    this.caminhouQuantosMetros += metrosCaminhados;
+    this.andando = true;
+}
 
 /*
 Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o valor
 da propriedade `andando` para o valor booleano que representa "falso".
 */
-
+pessoa.parar = function () {
+    this.andando = false;
+}
 
 /*
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
+pessoa.nomeCompleto = function () {
+    return `Olá! Meu nome é ${this.nome} ${this.sobreNome}`;
+}
+console.log(pessoa.nomeCompleto());
 
 /*
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
+pessoa.mostrarIdade = function () {
+    return `Olá, eu tenho ${this.idade} anos!`
+}
+console.log(pessoa.mostrarIdade());
 
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
 - "Eu peso [PESO]Kg."
 */
+pessoa.mostrarPeso = function() {
+    return `Eu peso ${this.peso}Kg.`
+}
+console.log(pessoa.mostrarPeso());
 
 /*
 Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
+pessoa.mostrarAltura = function () {
+    return `Minha altura é ${this.altura}m.`
+}
+console.log(pessoa.mostrarAltura());
 
 /*
 Agora vamos brincar um pouco com o objeto criado:
 Qual o nome completo da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
+console.log(pessoa.nomeCompleto());  // Olá! Meu nome é Danilo Silva Borges
 
 /*
 Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
+console.log(pessoa.mostrarIdade());  // Olá, eu tenho 29 anos!
+
 
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
+console.log(pessoa.mostrarPeso());  // Eu peso 85Kg.
 
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
+console.log(pessoa.mostrarAltura());  // Minha altura é 1.87m.
 
 /*
 Faça a `pessoa` fazer 3 aniversários.
 */
+pessoa.fazerAniversario();
+pessoa.fazerAniversario();
+pessoa.fazerAniversario();
 
 /*
 Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
 comentários inline ao lado da instrução para mostrar qual foi a resposta
 retornada)
 */
+console.log(pessoa.mostrarIdade());  // Olá, eu tenho 32 anos!
 
 /*
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
 com metragens diferentes passadas por parâmetro.
 */
+pessoa.andar(10);
+pessoa.andar(78);
+pessoa.andar(98);
 
 /*
 A pessoa ainda está andando? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
+console.log(pessoa.andando);  // true
 
 /*
 Se a pessoa ainda está andando, faça-a parar.
 */
+console.log(pessoa.parar());
 
 /*
 E agora: a pessoa ainda está andando? (Use uma instrução para responder e
 comentários inline ao lado da instrução para mostrar a resposta retornada)
 */
-
+console.log(pessoa.andando);
 
 /*
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-
+console.log(pessoa.caminhouQuantosMetros);  // 186 metros
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D
@@ -143,7 +179,17 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
+pessoa.Apresentacao = function () {
 
+    let caractereGenero = "";
+    this.sexo === "Masculino" ? caractereGenero = "o" : caractereGenero = "a";
+    let anosDeIdade = "";
+    this.idade <= 1 ? anosDeIdade = "ano" : anosDeIdade = "anos";
+    let metrosCam = "";
+    this.caminhouQuantosMetros <= 1 ? metrosCam = "metro" : metrosCam = "metros";
+
+    return `Olá, eu sou ${caractereGenero} ${this.nome} ${this.sobreNome}, tenho ${this.idade} ${anosDeIdade}, ${this.altura}, meu peso é ${this.peso} e, só hoje, eu já caminhei ${this.caminhouQuantosMetros} ${metrosCam}!`
+}
 
 // Agora, apresente-se ;)
-
+console.log(pessoa.Apresentacao());
