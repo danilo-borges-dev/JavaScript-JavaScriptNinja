@@ -1,3 +1,6 @@
 (function(){
-    // código...
-});
+    "use strict";
+
+    let nome = "Dnailo";
+    console.log(nome);
+})();
