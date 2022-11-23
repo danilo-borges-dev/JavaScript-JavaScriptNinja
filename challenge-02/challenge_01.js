@@ -1,5 +1,5 @@
 (function(){
-    "use restrict"
+    "use strict"
     // Nesse exercício, você está livre para escolher os nomes para suas variáveis e funções! :smile:
 
 
