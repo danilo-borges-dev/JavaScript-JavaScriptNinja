@@ -1,9 +1,4 @@
-function map(f, a){
-    let result = [];
-    for (let i = 0; i != a; i++){
-        result[i] = f(a[i]);
-        return result;
-    }
+let square = function (n) {
+    return n * n;
 }
-
-map(function(x) {return x * x * x}, [0, 1 , 3]);
+console.log(square(5));
