@@ -112,7 +112,33 @@
     - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
     citado acima, no lugar de "pessoas".
     */
+    carro.AdicionarPessoasAoCarro = function (arg){
+        if(this.quantidadePessoas < this.assentos && (this.assentos - this.quantidadePessoas >= arg)){
+            this.quantidadePessoas += arg;
+            return `Já temos ${this.quantidadePessoas} no carro!`;
+        }
+        
+        if(this.quantidadePessoas == this.assentos){
+            if(arg > 0){
+                return `O carro já está lotado!`;
+            }
+        }
 
+        if(arg < 0){
+            if(this.quantidadePessoas > 0){
+                this.quantidadePessoas += arg;
+                return `Já temos ${this.quantidadePessoas} no carro!`;
+            }
+        }
+
+        if(this.quantidadePessoas < this.assentos && (this.assentos - this.quantidadePessoas < arg)){
+            let singularOrPlural = "pessoa";
+            if(this.assentos - this.quantidadePessoas > 0){
+                singularOrPlural = "pessoas";
+            }
+            return `Só cabem mais ${this.assentos - this.quantidadePessoas} ${singularOrPlural}!`;
+        }        
+    }
 
     /*
     Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -122,37 +148,39 @@
 
     Qual a cor atual do carro?
     */
+    console.log(carro.cor);
 
 
     // Mude a cor do carro para vermelho.
-
+    carro.MudarCor("Laranja");
 
     // E agora, qual a cor do carro?
-
+    console.log(carro.cor);
 
     // Mude a cor do carro para verde musgo.
-
+    carro.MudarCor("Musgo");
 
     // E agora, qual a cor do carro?
-
+    console.log(carro.cor);
 
     // Qual a marca e modelo do carro?
-
+    console.log(carro.ObterMarca());
 
     // Adicione 2 pessoas no carro.
-
+    console.log(carro.AdicionarPessoasAoCarro(2));
 
     // Adicione mais 4 pessoas no carro.
-
+    console.log(carro.AdicionarPessoasAoCarro(4));
 
     // Faça o carro encher.
-
+    console.log(carro.AdicionarPessoasAoCarro(3));
 
     // Tire 4 pessoas do carro.
-
+    console.log(carro.AdicionarPessoasAoCarro(-4));
 
     // Adicione 10 pessoas no carro.
-
+    console.log(carro.AdicionarPessoasAoCarro(10));
 
     // Quantas pessoas temos no carro?
+    console.log(carro.quantidadePessoas);
 })();
