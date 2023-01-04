@@ -1,4 +1,5 @@
 (function(){
+    "use stric";
   /*
   Declare uma variável chamada `sum` e atribua a ela uma função chamada
   `calculateSum`. A função deve receber dois parâmetros e retornar a soma
@@ -40,7 +41,7 @@
   atribuída a ela, com a seguinte frase:
   "A função [NOME DA FUNÇÃO] retorna [RETORNO DA FUNÇÃO]."
   */
-  console.log(varShowName);
+  console.log(`A função ${showName.name} retorna ${varShowName}.`);
 
   /*
   Crie uma função literal chamada `calculator`, que funcione assim:
@@ -48,7 +49,9 @@
   vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Essa função deve retornar uma segunda função que fará o seguinte:
     - Essa segunda função deve receber dois parâmetros;
+
     - Esses dois parâmetros serão os operandos usados na operação matemática;
+
     - O retorno dessa segunda função é a operação matemática completa, com a frase:
     "Resultado da operação: [NUMERO1] [OPERADOR] [NUMERO2] = [RESULTADO]."
     - Se o operador não for válido, retornar a frase:
@@ -56,7 +59,14 @@
   */
   function calculator (operator) {
     return function (x, y) {
-      return `Resultado da operação: [NUMERO1] [OPERADOR] [NUMERO2] = [RESULTADO].`;
+      switch (operator) {
+        case "+": return `Resultado da operação: ${x} ${operator} ${y} = ${x + y}.`;
+        case "-": return `Resultado da operação: ${x} ${operator} ${y} = ${x - y}.`;
+        case "*": return `Resultado da operação: ${x} ${operator} ${y} = ${x * y}.`;
+        case "/": return `Resultado da operação: ${x} ${operator} ${y} = ${x / y}.`;
+        case "%": return `Resultado da operação: ${x} ${operator} ${y} = ${x % y}.`;
+        default: return `Operação inválida.`;
+      }
     }
   } 
 
@@ -64,23 +74,30 @@
   Declare uma variável chamada `sum`, que receberá a função acima, passando como
   parâmetro o operador de soma.
   */
-  // ?
+  let sum2 = calculator;
 
   /*
   Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
   */
-  // ?
+  console.log(sum2("+")(10, 5));
 
   /*
   Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
   `division` e `mod`, e atribua a elas a função `calculator`, passando o operador
   correto por parâmetro para cada uma delas.
   */
-  // ?
+  let subtraction = calculator("-");
+  let multiplication = calculator("*");
+  let division = calculator("/");
+  let mod = calculator("%");
 
   /*
   Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
   no console.
   */
-  // ?
+  console.log(subtraction(6,3));
+  console.log(multiplication(3,3));
+  console.log(division(16, 4));
+  console.log(mod(7, 4));
+
 })();
