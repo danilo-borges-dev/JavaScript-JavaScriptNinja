@@ -14,7 +14,7 @@
     var five = Number('5');
     console.log( five + ' é número?', typeof five === 'number' );
 
-    var concat = String(10 + 10);
+    var concat = String("1010");
     console.log( '"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string' );
 
     /*
@@ -31,7 +31,7 @@
         "-": function (x, y) { return x - y },
         "*": function (x, y) { return x * y },
         "/": function (x, y) { return x / y },
-        "%": function (x, y) { return x % y },
+        "%": function (x, y) { return x % y }
     }
 
     /*
@@ -45,23 +45,37 @@
     - O desafio é fazer o retorno sem usar "if" ou "switch".
     */
     function isOperatorValid ( operator ) {
-        return operator === "+" | operator === "-" | operator === "*" | operator === "/" | operator === "%" ? true : false;
+        return operation[operator] !== undefined;
     }
-    console.log(isOperatorValid("+"));
+    console.log(isOperatorValid("h"));
 
     /*
     Agora vamos criar a calculadora.
     - Crie uma função chamada `calculator`, que receberá como parâmetro um
     operador;
+
     - Se o operador não for válido, a função deve retornar "false";
+
     - Se o operador for válido, retornar uma segunda função que receberá dois
     parâmetros;
+
     - Se algum dos parâmetros não for um número, retornar "false";
+
     - Senão, retornar o método do objeto "operation" criado acima, baseado no
     operador passado para a função "calculator", e passando para esse método
     os dois parâmetros da função de retorno de "calculator".
     */
-    // ?
+    function calculadora (operador) {
+        if(isOperatorValid(operador)){
+            return false;
+        }
+        return function (x, y) {
+            if(typeof(x) !== "number" || typeof(y) !== "number"){
+                return false;
+            }
+            return operation.operador(x, y);
+        }
+    }
 
     /*
     Crie uma função chamada "showOperationMessage" que recebe três parâmetros:
@@ -70,7 +84,9 @@
     'A operação [NUMBER1] [OPERATOR] [NUMBER2] =';
     Essa função mostrará a mensagem da operação que criaremos mais abaixo.
     */
-    // ?
+    function showOperationMessage (operador, x, y) {
+        return `A operação ${x} ${operador} ${y} =`;
+    }
 
     /*
     Crie uma função chamada "showErrorMessage" que recebe um parâmetro: o
@@ -78,7 +94,11 @@
     Essa função deverá retornar a frase:
     'Operação "[OPERATOR]" não permitida!'
     */
-    // ?
+    function showErrorMessage (operador) {
+        if (!isOperatorValid(operador)) {
+            return `Operação "${operador}" não permitida!`;
+        }
+    }
 
     /*
     Nossa calculadora está pronta! Agora vamos testá-la:
@@ -86,7 +106,9 @@
     - Declare 3 variáveis: "number1" e "number2", iniciando com valor zero, e
     "operationSignal", sem valor por enquanto.
     */
-    // ?
+    let number1 = 0;
+    let number2 = 0;
+    let operationSignal = "";
 
     /*
     PASSO 2:
@@ -94,21 +116,27 @@
     variável chamada "sum", que receba a função "calculator", passando por
     parâmetro a variável que recebeu o sinal da operação.
     */
-    // ?
+    operationSignal = "+";
+    let sum = calculadora(operationSignal);
 
     /*
     PASSO 3:
     "sum" agora é uma função, e, se o sinal correto não foi passado para a
-    função "calculator", "sum" será false. Certifique-se de que "sum" não é
+    função "calculator", "sum" será false. 
+    
+    Certifique-se de que "sum" não é
     "false", e então atribua às variáveis "number1" e "number2", dois números
     que serão os operandos da operação de soma.
+
     Após isso, mostre no console o resultado da operação, passando dois
     parâmetros para o método "log" de "console":
+
     - O primeiro será a mensagem da operação (usando a função criada acima);
     - O segundo, a função de soma, passando os dois operandos.
     - Se "sum" for "false", mostrar no console a mensagem de erro.
     */
-    // ?
+    number1 = 10;
+    number2 = 2;
 
     /*
     Repita desde o "PASSO 2" com as operações de subtração, multiplicação,
